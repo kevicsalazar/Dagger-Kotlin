@@ -18,6 +18,7 @@ class PagePresenter @Inject constructor(val view: View, val rep: PostsRepository
             view.hideProgress()
             view.setupAdapter(it)
         }, {
+            view.hideProgress()
             view.showMessage("Error", it.message ?: "Ha ocurrido un error")
         })
     }

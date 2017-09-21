@@ -19,12 +19,12 @@ class MainPresenter @Inject constructor(val view: View) {
             when (itemId) {
                 R.id.action_page_1 -> {
                     view.showFragmentView("1")
-                    view.setupColor(R.drawable.bg_tab_2)
+                    view.setupColor(R.drawable.bg_tab_1)
                     view.startColorTransition(R.color.page_1)
                 }
                 R.id.action_page_2 -> {
                     view.showFragmentView("2")
-                    view.setupColor(R.drawable.bg_tab_1)
+                    view.setupColor(R.drawable.bg_tab_2)
                     view.startColorTransition(R.color.page_2)
                 }
                 R.id.action_page_3 -> {

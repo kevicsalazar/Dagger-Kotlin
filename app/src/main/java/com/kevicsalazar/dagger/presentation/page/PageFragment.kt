@@ -7,6 +7,7 @@ import com.kevicsalazar.dagger.R
 import com.kevicsalazar.dagger.data.model.Post
 import com.kevicsalazar.dagger.presentation.BaseFragment
 import com.kevicsalazar.dagger.presentation.adapters.PostsRecyclerAdapter
+import com.kevicsalazar.dagger.utils.extensions.alert
 import kotlinx.android.synthetic.main.fragment_page.*
 import javax.inject.Inject
 
@@ -36,15 +37,15 @@ class PageFragment : BaseFragment(), PagePresenter.View {
     }
 
     override fun showProgress() {
-
+        swipeRefresh.visibility = View.VISIBLE
     }
 
     override fun hideProgress() {
-
+        swipeRefresh.visibility = View.GONE
     }
 
     override fun showMessage(title: String, message: String) {
-
+        alert(title, message).show()
     }
 
 }

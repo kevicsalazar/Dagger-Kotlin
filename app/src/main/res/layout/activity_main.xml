@@ -23,7 +23,7 @@
                 android:layout_height="28dp"
                 android:layout_gravity="center"
                 android:contentDescription="@string/app_name"
-                android:src="@drawable/ic_site"/>
+                app:srcCompat="@drawable/ic_main"/>
 
         </android.support.v7.widget.Toolbar>
 

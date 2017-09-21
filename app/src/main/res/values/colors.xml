@@ -5,9 +5,9 @@
     <color name="colorPrimaryDark">#48B6C4</color>
     <color name="colorAccent">#D3D5D6</color>
 
-    <color name="page_1">#2856B6</color>
-    <color name="page_2">#9C37CB</color>
-    <color name="page_3">#AA2E85</color>
+    <color name="page_1">#9C37CB</color>
+    <color name="page_2">#50CADA</color>
+    <color name="page_3">#FFC107</color>
 
     <!--RED-->
     <color name="red_50">#FFEBEE</color>
