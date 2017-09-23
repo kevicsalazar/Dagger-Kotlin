@@ -6,4 +6,5 @@ package com.kevicsalazar.dagger.data.model
  */
 data class Post(val id: String,
                 val name: String,
-                val description: String)
+                val description: String,
+                val previewUrl: String)

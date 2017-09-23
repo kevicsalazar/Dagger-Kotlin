@@ -16,7 +16,7 @@ class DataModule {
 
     @Provides
     fun provideRetrofit() = Retrofit.Builder()
-            .baseUrl("https://startappspe-20811.firebaseapp.com/")
+            .baseUrl("http://10.0.2.2:8082/")
             .addConverterFactory(MoshiConverterFactory.create())
             .build()!!
 

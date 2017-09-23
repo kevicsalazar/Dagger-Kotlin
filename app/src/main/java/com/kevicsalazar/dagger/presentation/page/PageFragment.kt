@@ -19,9 +19,17 @@ class PageFragment : BaseFragment(), PagePresenter.View {
 
     @Inject lateinit var presenter: PagePresenter
 
+    var postAdapter: PostsRecyclerAdapter? = null
+
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        postAdapter = PostsRecyclerAdapter()
+        recyclerView.layoutManager = LinearLayoutManager(context)
+        recyclerView.adapter = postAdapter
+
         presenter.loadData(arguments.getString("type"))
+
     }
 
     override fun getLayout() = R.layout.fragment_page
@@ -31,17 +39,15 @@ class PageFragment : BaseFragment(), PagePresenter.View {
     }
 
     override fun setupAdapter(items: List<Post>) {
-        val adapter = PostsRecyclerAdapter(items)
-        recyclerView.layoutManager = LinearLayoutManager(context)
-        recyclerView.adapter = adapter
+        postAdapter?.addAll(items)
     }
 
     override fun showProgress() {
-        swipeRefresh.visibility = View.VISIBLE
+        swipeRefresh.isRefreshing = true
     }
 
     override fun hideProgress() {
-        swipeRefresh.visibility = View.GONE
+        swipeRefresh.isRefreshing = false
     }
 
     override fun showMessage(title: String, message: String) {

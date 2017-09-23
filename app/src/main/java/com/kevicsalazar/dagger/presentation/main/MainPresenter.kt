@@ -18,17 +18,17 @@ class MainPresenter @Inject constructor(val view: View) {
         if (idSelected != itemId) {
             when (itemId) {
                 R.id.action_page_1 -> {
-                    view.showFragmentView("1")
+                    view.showFragmentView("food")
                     view.setupColor(R.drawable.bg_tab_1)
                     view.startColorTransition(R.color.page_1)
                 }
                 R.id.action_page_2 -> {
-                    view.showFragmentView("2")
+                    view.showFragmentView("travel")
                     view.setupColor(R.drawable.bg_tab_2)
                     view.startColorTransition(R.color.page_2)
                 }
                 R.id.action_page_3 -> {
-                    view.showFragmentView("3")
+                    view.showFragmentView("adventure")
                     view.setupColor(R.drawable.bg_tab_3)
                     view.startColorTransition(R.color.page_3)
                 }
